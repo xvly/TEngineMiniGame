@@ -13,6 +13,8 @@ namespace GameLogic
             
             Log.Info("进入战斗流程");
             
+            GameModule.UI.ShowUI<UIBattleMain>();
+            
             // GameModule.UI.ShowUI<UIHome>();
         }
         

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using TEngine;
+using UnityEngine.UIElements;
 
 namespace Procedure
 {
@@ -24,21 +25,23 @@ namespace Procedure
                 return;
             }
             
-            
-            
             _events.Add(eventType, handler);
             GameEvent.AddEventListener(eventType, handler);
+        }
+        
+        void RemoveAllEventListeners()
+        {
+            foreach (var eventData in _events)
+            {
+                GameEvent.RemoveEventListener(eventData.Key,eventData.Value);
+            }   
         }
 
         protected override void OnLeave(IFsm<IProcedureModule> procedureOwner, bool isShutdown)
         {
             base.OnLeave(procedureOwner, isShutdown);
 
-            foreach (var eventData in _events)
-            {
-                GameEvent.RemoveEventListener(eventData.Key,eventData.Value);
-            }   
-            
+            RemoveAllEventListeners();   
         }
     }
 }

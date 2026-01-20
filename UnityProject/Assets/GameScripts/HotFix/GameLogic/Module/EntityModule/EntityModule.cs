@@ -1,5 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using GameConfig;
+using TEngine;
 using UnityEngine;
 
 namespace GameLogic
@@ -10,12 +11,20 @@ namespace GameLogic
         
         public async UniTask<GameObject> CreateEntity(int configId)
         {
-            // PoolManager.Instance.
-
             var assetPathData = TbItem.Get(configId);
             
             var obj = await  PoolManager.Instance.GetGameObject(assetPathData.ResourcesName);
+            
+#if UNITY_EDITOR 
+            obj.name = $"entity {configId}";
+#endif
+            
             return obj;    
+        }
+        
+        public void ClearEntity(GameObject entity)
+        {
+            PoolManager.Instance.ClearGameObject(entity);
         }
     }
 }

@@ -45,6 +45,7 @@ public partial class GameApp
     private static void StartGameLogic()
     {
         GameModule.CodeType.Awake(_hotfixAssembly.ToArray());
+        
         GameModule.Controller.Awake();
         
         // GameModule.

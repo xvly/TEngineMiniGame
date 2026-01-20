@@ -14,13 +14,7 @@ namespace GameLogic
             {
                 var controller = Activator.CreateInstance(controllerType) as IControllerBase;
                 controller.Awake();
-                // controller.
             }
-            
-            // foreach (var assembly in assemblies)
-            // {
-            //     // var types = assembly.GetTypes(typeof(ControllerAttribute));
-            // }
         }
     }
 }

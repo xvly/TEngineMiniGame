@@ -15,7 +15,7 @@ MonoBehaviour:
   ProjectConf:
     projectName: 
     Appid: 
-    CDN: http://192.168.31.40:8001
+    CDN: 
     assetLoadType: 1
     compressDataPackage: 1
     VideoUrl: 
@@ -48,7 +48,7 @@ MonoBehaviour:
     PreloadWXFont: 0
     disableMultiTouch: 1
   CompileOptions:
-    DevelopBuild: 0
+    DevelopBuild: 1
     AutoProfile: 0
     ScriptOnly: 0
     Il2CppOptimizeSize: 1
@@ -57,7 +57,7 @@ MonoBehaviour:
     fbslim: 1
     DeleteStreamingAssets: 0
     ProfilingMemory: 0
-    CleanBuild: 1
+    CleanBuild: 0
     CustomNodePath: 
     autoAdaptScreen: 0
     showMonitorSuggestModal: 0

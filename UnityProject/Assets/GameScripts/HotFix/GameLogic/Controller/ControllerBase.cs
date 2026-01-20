@@ -10,7 +10,6 @@ namespace GameLogic
 
         public abstract void Awake();
 
-
         protected void AddEventListener(int eventType, Action handler)
         {
             if (_events.ContainsKey(eventType))

@@ -4,8 +4,8 @@ using TEngine;
 
 namespace GameLogic
 {
-    [Window(UILayer.UI,location:"BattleMainUI")]
-    class BattleMainUI : UIWindow
+    [Window(UILayer.UI,location:"UIBattleMain")]
+    class UIBattleMain : UIWindow
     {
         #region 脚本工具生成的代码
         private RectTransform _rectContainer;

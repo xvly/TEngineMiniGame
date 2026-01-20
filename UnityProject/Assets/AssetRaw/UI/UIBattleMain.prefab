@@ -2005,7 +2005,7 @@ GameObject:
   - component: {fileID: 7952108263234884538}
   - component: {fileID: 5474247446795850362}
   m_Layer: 5
-  m_Name: BattleMainUI
+  m_Name: UIBattleMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

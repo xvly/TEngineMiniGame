@@ -18,8 +18,6 @@ namespace GameLogic
             GameModule.UI.ShowUIAsync<UIHome>();
 
             AddEventListener(EventHome.EnterBattle, EnterBattle);
-
-            GameModule.Entity.CreateEntity(202001);
         }
         
         protected override void OnLeave(IFsm<IProcedureModule> procedureOwner, bool isShutdown)
@@ -32,7 +30,7 @@ namespace GameLogic
         public void EnterBattle()
         {
             _procedureOwner.SetData("NextProcedure", typeof(ProcedureBattle));
-            _procedureOwner.SetData<string>("NextSceneName", "scene_battle");
+            _procedureOwner.SetData("NextSceneName", "scene_battle");
             ChangeState<ProcedureChangeScene>(_procedureOwner);
         }
     }
