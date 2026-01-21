@@ -13,7 +13,7 @@ namespace GameLogic
 
             _procedureOwner = procedureOwner;
             
-            Log.Info("进入主界面流程");
+            Log.Info("进入主界面流程 1");
             
             GameModule.UI.ShowUIAsync<UIHome>();
 
